@@ -1,22 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Royal & Global Palette */
+  --deep-forest-green: #0a3d2e;  /* Agriculture, trust, sustainability */
+  --rich-gold: #c5a059;          /* Luxury, royalty, premium quality */
+  --ivory: #f8f5f2;              /* Clean, international feel */
+  --charcoal-grey: #2d2d2d;      /* Professional text colour */
+  
+  /* Semantic Mappings */
+  --background: var(--ivory);
+  --foreground: var(--charcoal-grey);
+  
+  --primary: var(--deep-forest-green);
+  --primary-foreground: var(--ivory);
+  
+  --accent: var(--rich-gold);
+  --accent-foreground: #000000;
+  
+  --card: #ffffff;
+  --card-foreground: var(--charcoal-grey);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  /* Expose raw palette if needed */
+  --color-forest: var(--deep-forest-green);
+  --color-gold: var(--rich-gold);
+  --color-ivory: var(--ivory);
+  --color-charcoal: var(--charcoal-grey);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -24,44 +46,28 @@ body {
   color: var(--foreground);
 }
 
+/* Specific component styles for new theme */
+.bg-forest { background-color: var(--deep-forest-green); }
+.text-forest { color: var(--deep-forest-green); }
+
+.bg-gold { background-color: var(--rich-gold); }
+.text-gold { color: var(--rich-gold); }
+
+.bg-ivory { background-color: var(--ivory); }
+.text-ivory { color: var(--ivory); }
+
 @keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
 }
 
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
+.animate-blob { animation: blob 7s infinite; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
