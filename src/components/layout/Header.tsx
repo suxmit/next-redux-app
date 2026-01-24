@@ -10,32 +10,19 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 bg-forest text-gold text-xs py-2 px-4 border-b border-gold/20 flex justify-between items-center font-sans tracking-wide">
-        <div className="max-w-7xl mx-auto w-full flex justify-between px-4 sm:px-6 lg:px-8">
-            <div className="flex gap-4">
-                <span className="opacity-90">info@luxagrotaurea.com</span>
-            </div>
-            <div className="hidden sm:flex gap-4">
-                <span className="uppercase tracking-widest text-[0.65rem]">Premium Agricultural Exports</span>
-            </div>
-        </div>
-      </div>
-      <header className="fixed top-9 left-0 right-0 z-40 bg-ivory/95 backdrop-blur-md border-b border-forest/10 transition-all shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-                <Link href="/" className="group flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
-                <div className="h-10 w-10 relative flex items-center justify-center bg-forest rounded-sm text-gold">
-                    {/* Abstract Leaf/Crown Logo Placeholder */}
-                     <span className="text-2xl">🌿</span>
-                </div>
+                <Link href="/" className="group flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                <span className="text-3xl">🌿</span>
                 <div className="flex flex-col">
-                    <span className="text-xl font-serif font-bold tracking-widest text-forest group-hover:text-gold transition-colors">
+                    <span className="text-xl font-bold tracking-tight text-forest group-hover:text-gold transition-colors">
                         TAUREA
                     </span>
-                    <span className="text-[0.6rem] uppercase tracking-[0.2em] text-gold font-medium">
-                        Lux Agro
+                    <span className="text-[0.6rem] uppercase tracking-wider text-gold font-medium">
+                        Global Exports
                     </span>
                 </div>
                 </Link>
@@ -54,7 +41,7 @@ const Header = () => {
                     { name: 'Contact', href: '#contact' }
                 ].map((item) => (
                     <li key={item.name}>
-                    <Link href={item.href} className="text-charcoal/80 hover:text-forest transition-colors text-sm font-medium tracking-wide uppercase hover:underline decoration-gold underline-offset-4 decoration-1 flex items-center">
+                    <Link href={item.href} className="text-charcoal/80 hover:text-forest transition-colors text-sm font-medium flex items-center">
                         {item.name}
                     </Link>
                     </li>

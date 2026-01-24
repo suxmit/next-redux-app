@@ -14,7 +14,7 @@ const ProductDropdown = () => {
       onMouseLeave={() => setIsOpen(false)}
     >
       <button 
-        className="text-charcoal/80 hover:text-forest transition-colors text-sm font-medium tracking-wide uppercase flex items-center gap-1"
+        className="text-charcoal/80 hover:text-forest transition-colors text-sm font-medium flex items-center gap-1"
         onClick={() => setIsOpen(!isOpen)}
         type="button"
         aria-expanded={isOpen}

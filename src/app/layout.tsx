@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.className} bg-ivory text-charcoal antialiased selection:bg-gold/30 selection:text-forest`}>
+      <body className={`${inter.className} bg-white text-charcoal antialiased selection:bg-gold/30 selection:text-forest`}>
         <Header />
         <main className="min-h-screen">
           {children}
