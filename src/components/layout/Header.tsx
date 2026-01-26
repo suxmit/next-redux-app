@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ProductDropdown from './ProductDropdown';
 import { products } from '@/data/products';
 
@@ -16,14 +17,14 @@ const Header = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
                 <Link href="/" className="group flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                <span className="text-3xl">🌿</span>
-                <div className="flex flex-col">
-                    <span className="text-xl font-bold tracking-tight text-forest group-hover:text-gold transition-colors">
-                        TAUREA
-                    </span>
-                    <span className="text-[0.6rem] uppercase tracking-wider text-gold font-medium">
-                        Global Exports
-                    </span>
+                <div className="relative h-20 w-72">
+                     <Image 
+                        src="/logo-header-unified.png" 
+                        alt="Lux Agro Taurea Logo" 
+                        fill
+                        className="object-contain object-left"
+                        priority
+                     />
                 </div>
                 </Link>
             </div>
@@ -76,12 +77,14 @@ const Header = () => {
                 {/* Drawer Header */}
                 <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-forest/10">
                     <Link href="/" className="group flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                        <div className="h-8 w-8 relative flex items-center justify-center bg-forest rounded-sm text-gold">
-                             <span className="text-lg">🌿</span>
+                        <div className="relative h-12 w-56">
+                            <Image 
+                                src="/logo-header-unified.png" 
+                                alt="Lux Agro Taurea" 
+                                fill
+                                className="object-contain object-left"
+                            />
                         </div>
-                        <span className="text-lg font-serif font-bold tracking-widest text-forest">
-                            TAUREA
-                        </span>
                     </Link>
                     <button 
                         onClick={() => setIsMobileMenuOpen(false)}

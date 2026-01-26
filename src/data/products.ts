@@ -103,6 +103,7 @@ export const products: Category[] = [
                 name: 'Rice',
                 slug: 'rice',
                 description: 'Premium Indian rice varieties including Basmati.',
+                image: '/images/products/cereals-hero.png',
                 varieties: [{ name: 'Basmati Rice' }, { name: 'Non-Basmati Rice' }]
             },
             {
@@ -131,6 +132,7 @@ export const products: Category[] = [
                 name: 'Pearl Millet (Bajra)',
                 slug: 'pearl-millet',
                 description: 'Gluten-free Pearl Millet.',
+                image: '/images/products/millets-hero.png',
                 varieties: [{ name: 'Whole Bajra' }]
             },
             {
@@ -159,6 +161,7 @@ export const products: Category[] = [
                 name: 'Assorted Spices',
                 slug: 'assorted',
                 description: 'Aromatic Indian spices.',
+                image: '/images/products/spices-hero.png',
                 varieties: [
                     { name: 'Chilli' }, { name: 'Turmeric' }, { name: 'Black Pepper' },
                     { name: 'Coriander' }, { name: 'Cumin' }, { name: 'Fennel' },
@@ -179,6 +182,7 @@ export const products: Category[] = [
                 name: 'Fresh Vegetables',
                 slug: 'fresh',
                 description: 'Farm fresh vegetables.',
+                image: '/images/products/vegetables-hero.png',
                 varieties: [
                     { name: 'Onion' }, { name: 'Garlic' }, { name: 'Ginger' },
                     { name: 'Green Chilli' }, { name: 'Okra' }, { name: 'Beetroot' },
@@ -205,6 +209,7 @@ export const products: Category[] = [
                 name: 'Fresh Fruits',
                 slug: 'fresh',
                 description: 'Seasonal fresh fruits.',
+                image: '/images/products/fruits-hero.png',
                 varieties: [
                     { name: 'Mango' }, { name: 'Banana' }, { name: 'Grapes' },
                     { name: 'Papaya' }, { name: 'Guava' }, { name: 'Citrus Fruits' },
@@ -223,6 +228,7 @@ export const products: Category[] = [
                 name: 'Flours',
                 slug: 'flours',
                 description: 'Premium stone-ground flours.',
+                image: '/images/products/flour-hero.png',
                 varieties: [
                     { name: 'Wheat Flour' }, { name: 'Rice Flour' }, { name: 'Maize Flour' },
                     { name: 'Millet Flours' }, { name: 'Gram Flour (Besan)' }

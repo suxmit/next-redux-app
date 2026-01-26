@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -7,61 +8,90 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="text-xl font-bold tracking-wider text-ivory mb-6 block font-serif">
-              TAUREA <span className="text-gold text-sm tracking-[0.2em] font-sans block mt-1 font-normal">LUX AGRO</span>
+            <Link href="/" className="mb-6 block relative h-20 w-64">
+                <Image 
+                    src="/logo-footer-unified.png" 
+                    alt="Lux Agro Taurea" 
+                    fill
+                    className="object-contain object-left"
+                />
             </Link>
             <p className="text-ivory/70 text-sm leading-relaxed max-w-xs">
-              Curating the finest agricultural visuals and sustainable stories from around the globe.
+              Bridging the gap between Indian farmers and global markets with premium quality agricultural exports.
             </p>
           </div>
 
-          {/* Links Column 1 */}
+          {/* Products Column */}
           <div>
-            <h3 className="text-gold font-semibold mb-6 tracking-wide text-sm uppercase">Explore</h3>
+            <h3 className="text-gold font-semibold mb-6 tracking-wide text-sm uppercase">Our Products</h3>
             <ul className="space-y-4">
-              {['The Gallery', 'Artists', 'Collections', 'Exhibitions'].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-ivory/70 hover:text-gold text-sm transition-colors">
-                    {item}
+              {[
+                { name: 'Pulses & Legumes', href: '/products/pulses-legumes' },
+                { name: 'Cereals & Grains', href: '/products/cereals-grains' },
+                { name: 'Spices', href: '/products/spices' },
+                { name: 'Vegetables', href: '/products/vegetables' },
+                { name: 'Fruits', href: '/products/fruits' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-ivory/70 hover:text-gold text-sm transition-colors">
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Links Column 2 */}
+          {/* Company Column */}
           <div>
             <h3 className="text-gold font-semibold mb-6 tracking-wide text-sm uppercase">Company</h3>
             <ul className="space-y-4">
-              {['Our Mission', 'Sustainability', 'Press', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-ivory/70 hover:text-gold text-sm transition-colors">
-                    {item}
+              {[
+                { name: 'About Us', href: '/about' },
+                { name: 'Our Mission', href: '/#our-story' },
+                { name: 'Privacy Policy', href: '/privacy-policy' },
+                // { name: 'Contact', href: '#contact' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-ivory/70 hover:text-gold text-sm transition-colors">
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
-           {/* Newsletter */}
-           <div>
-            <h3 className="text-gold font-semibold mb-6 tracking-wide text-sm uppercase">Newsletter</h3>
-            <div className="flex flex-col gap-3">
-              <input 
-                type="email" 
-                placeholder="email@example.com" 
-                className="bg-ivory/10 border border-gold/20 text-ivory px-4 py-3 focus:outline-none focus:border-gold transition-colors text-sm w-full placeholder:text-ivory/30"
-              />
-              <button className="bg-gold hover:bg-ivory hover:text-forest text-forest px-4 py-3 transition-colors text-sm font-medium tracking-wide border border-gold">
-                SUBSCRIBE
-              </button>
-            </div>
+          
+          {/* Contact Column */}
+          <div>
+            <h3 className="text-gold font-semibold mb-6 tracking-wide text-sm uppercase">Get in Touch</h3>
+            <ul className="space-y-4">
+              <li className="flex flex-col gap-1">
+                <span className="text-forest/60 text-xs font-bold uppercase tracking-wider bg-gold/10 inline-block px-2 py-1 rounded w-fit text-ivory/80">
+                    Corporate Office
+                </span>
+                <p className="text-ivory/70 text-sm leading-relaxed">
+                  123, Business Park, <br />
+                  Mumbai, Maharashtra, India
+                </p>
+              </li>
+              <li className="flex flex-col gap-1">
+                 <span className="text-ivory/50 text-xs uppercase tracking-wider">Email</span>
+                 <a href="mailto:export@luxagrotaurea.com" className="text-ivory/90 hover:text-gold text-sm transition-colors font-medium">
+                    export@luxagrotaurea.com
+                 </a>
+              </li>
+              <li className="flex flex-col gap-1">
+                 <span className="text-ivory/50 text-xs uppercase tracking-wider">Phone</span>
+                 <a href="tel:+919876543210" className="text-ivory/90 hover:text-gold text-sm transition-colors font-medium">
+                    +91 98765 43210
+                 </a>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div className="border-t border-gold/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-ivory/50 text-xs tracking-wider">
-            © {new Date().getFullYear()} TAUREA LUX AGRO.
+            © {new Date().getFullYear()} LUX AGRO TAUREA.
           </p>
           <div className="flex space-x-8">
             {['Instagram', 'Pinterest', 'LinkedIn'].map((item) => (

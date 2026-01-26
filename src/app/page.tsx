@@ -2,6 +2,7 @@
 
 import CategoryGrid from '@/components/gallery/CategoryGrid';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -32,13 +33,16 @@ export default function Home() {
         </div>
 
         {/* Right Image */}
-        <div className="relative h-[50vh] lg:h-auto bg-ivory order-1 lg:order-2">
-            {/* Using a placeholder or existing abstract pattern until a real port/ship image is available */}
-            <div className="absolute inset-0 bg-forest/5 flex items-center justify-center">
-                 <div className="text-center p-8">
-                    <span className="text-6xl mb-4 block">🌍</span>
-                    <span className="text-forest/20 font-bold text-xl uppercase tracking-widest">Global Logistics</span>
-                 </div>
+        <div className="relative h-[50vh] lg:h-auto bg-ivory order-1 lg:order-2 min-h-[400px]">
+            <div className="absolute inset-0">
+                <Image 
+                    src="/hero.png"
+                    alt="Premium Indian Agricultural Exports - Pulses, Grains, and Spices"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                />
             </div>
         </div>
       </section>
@@ -59,7 +63,7 @@ export default function Home() {
       <CategoryGrid />
 
       {/* Global Presence / Stats Section */}
-      <section className="py-24 bg-white border-t border-forest/10">
+      {/* <section className="py-24 bg-white border-t border-forest/10">
           <div className="max-w-7xl mx-auto px-6">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
                   {[
@@ -75,18 +79,18 @@ export default function Home() {
                   ))}
               </div>
           </div>
-      </section>
+      </section> */}
 
       {/* Vision Section */}
       <section id="our-story" className="py-24 bg-forest text-ivory">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <div className="max-w-5xl mx-auto px-4 text-center">
              <span className="text-gold text-lg font-medium mb-4 block">Our Vision</span>
              <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
                 "To build sustainable global partnerships by delivering trusted Indian agricultural products with integrity."
              </h2>
-             <Link href="#contact" className="inline-block border-b border-gold pb-1 text-gold hover:text-white hover:border-white transition-colors">
+             {/* <Link href="#contact" className="inline-block border-b border-gold pb-1 text-gold hover:text-white hover:border-white transition-colors">
                 Contact Us to Partner →
-             </Link>
+             </Link> */}
         </div>
       </section>
     </div>
