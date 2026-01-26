@@ -1,71 +1,96 @@
-import GalleryGrid from '@/components/gallery/GalleryGrid';
+'use client';
+
+import CategoryGrid from '@/components/gallery/CategoryGrid';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-200 selection:bg-emerald-500/30 font-sans">
+    <div className="font-sans text-charcoal bg-white">
       
-      {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        {/* Background Overlay */}
-        <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-stone-950/70 z-10"></div>
-            {/* Abstract Background - Simulating nature texture */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-900/40 via-stone-950 to-stone-950 animate-pulse"></div>
+      {/* Tizara-Style Hero Section (Split Layout) */}
+      <section className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 pt-20">
+        {/* Left Content */}
+        <div className="flex flex-col justify-center px-6 md:px-12 lg:px-20 py-20 bg-white order-2 lg:order-1">
+            <span className="text-gold font-medium tracking-widest uppercase text-xs mb-4">
+                Global Agricultural Exports
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold text-forest leading-tight mb-8">
+                Harvesting Heritage.<br />
+                Delivering Excellence.
+            </h1>
+            <p className="text-lg text-charcoal/80 leading-relaxed max-w-lg mb-10">
+                Lux Agro Taurea bridges the gap between Indian farmers and global markets, exporting premium quality pulses, spices, and grains with unmatched reliability.
+            </p>
+            <div className="flex gap-4">
+                <Link href="#contact" className="px-8 py-3 bg-forest text-gold border border-forest font-medium hover:bg-forest/90 transition-colors rounded-sm shadow-md">
+                    Get in Touch
+                </Link>
+                <Link href="#products" className="px-8 py-3 border border-forest/20 text-forest font-medium hover:border-gold hover:text-gold transition-colors rounded-sm">
+                    View Products
+                </Link>
+            </div>
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            
-          <h1 className="text-5xl md:text-8xl font-serif text-white tracking-tight mb-6 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
-            AGRO <span className="text-emerald-600 font-light italic">Essence</span>
-          </h1>
-
-          <p className="text-lg md:text-xl text-stone-400 max-w-lg mx-auto mb-12 leading-relaxed font-light tracking-wide opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards]">
-            Rediscovering the profound beauty of agriculture through a lens of sustainability and art.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards]">
-            <a href="#gallery" className="px-8 py-3 bg-emerald-700 hover:bg-emerald-600 text-white text-sm tracking-widest uppercase transition-colors duration-300">
-              Explore Gallery
-            </a>
-          </div>
-        </div>
-        
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
-            <span className="text-[10px] uppercase tracking-widest text-stone-500">Scroll</span>
-            <div className="w-[1px] h-12 bg-gradient-to-b from-emerald-500 to-transparent"></div>
+        {/* Right Image */}
+        <div className="relative h-[50vh] lg:h-auto bg-ivory order-1 lg:order-2 min-h-[400px]">
+            <div className="absolute inset-0">
+                <Image 
+                    src="/hero.png"
+                    alt="Premium Indian Agricultural Exports - Pulses, Grains, and Spices"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+            </div>
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <GalleryGrid />
+      {/* Intro Section - Tizara Style "Who We Are" */}
+      <section className="py-24 bg-ivory px-6">
+        <div className="max-w-4xl mx-auto text-center">
+             <h2 className="text-3xl font-bold text-forest mb-6">About Lux Agro Taurea</h2>
+             <p className="text-xl text-charcoal/80 leading-relaxed font-light">
+                We are a dedicated export house focused on delivering the finest Indian agricultural produce to the world. 
+                With a deep-rooted heritage in farming and modern supply chain management, we ensure that every grain meets 
+                international standards of quality and safety.
+             </p>
+        </div>
+      </section>
 
-      {/* Philosophy / Mission Section */}
-      <section id="our-story" className="py-32 bg-stone-900 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <span className="text-amber-500/80 text-xl font-serif italic mb-4 block">Our Philosophy</span>
-            <h2 className="text-3xl md:text-5xl text-white font-serif leading-tight mb-8">
-                "We believe that every harvest tells a story of <span className="text-emerald-500">resilience</span>, connection, and the earth's timeless rhythm."
-            </h2>
-            <p className="text-stone-400 leading-relaxed max-w-2xl mx-auto">
-                Agro Essence is more than a gallery; it is a tribute to the hands that toil and the soil that gives. 
-                We curate visual narratives that bridge the gap between modern consumption and ancient cultivation.
-            </p>
-            
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center border-t border-white/5 pt-12">
-                <div>
-                    <span className="block text-3xl font-light text-white mb-2">01</span>
-                    <span className="text-xs uppercase tracking-widest text-stone-500">Cultivate</span>
-                </div>
-                <div>
-                    <span className="block text-3xl font-light text-white mb-2">02</span>
-                    <span className="text-xs uppercase tracking-widest text-stone-500">Sustain</span>
-                </div>
-                <div>
-                    <span className="block text-3xl font-light text-white mb-2">03</span>
-                    <span className="text-xs uppercase tracking-widest text-stone-500">Inspire</span>
-                </div>
-            </div>
+      {/* Category Grid Section */}
+      <CategoryGrid />
+
+      {/* Global Presence / Stats Section */}
+      {/* <section className="py-24 bg-white border-t border-forest/10">
+          <div className="max-w-7xl mx-auto px-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+                  {[
+                      { label: "Countries Served", value: "20+" },
+                      { label: "Products Exported", value: "50+" },
+                      { label: "Farmers Connected", value: "500+" },
+                      { label: "Years of Legacy", value: "10+" }
+                  ].map((stat) => (
+                      <div key={stat.label}>
+                          <div className="text-5xl font-bold text-gold mb-2">{stat.value}</div>
+                          <div className="text-forest font-medium text-sm uppercase tracking-wide">{stat.label}</div>
+                      </div>
+                  ))}
+              </div>
+          </div>
+      </section> */}
+
+      {/* Vision Section */}
+      <section id="our-story" className="py-24 bg-forest text-ivory">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+             <span className="text-gold text-lg font-medium mb-4 block">Our Vision</span>
+             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
+                "To build sustainable global partnerships by delivering trusted Indian agricultural products with integrity."
+             </h2>
+             {/* <Link href="#contact" className="inline-block border-b border-gold pb-1 text-gold hover:text-white hover:border-white transition-colors">
+                Contact Us to Partner →
+             </Link> */}
         </div>
       </section>
     </div>
