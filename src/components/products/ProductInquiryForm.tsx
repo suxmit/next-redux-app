@@ -21,12 +21,31 @@ const ProductInquiryForm = ({ product }: ProductInquiryFormProps) => {
     e.preventDefault();
     setStatus('submitting');
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // Reset form and show success
-    setStatus('success');
-    setFormData({ name: '', email: '', phone: '', variety: '', message: '' });
+    try {
+      const requestData = {
+        ...formData,
+        product: product.name
+      };
+
+      const res = await fetch('/api/inquiries', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData)
+      });
+
+      if (!res.ok) {
+          throw new Error('Failed to submit');
+      }
+
+      // Reset form and show success
+      setStatus('success');
+      setFormData({ name: '', email: '', phone: '', variety: '', message: '' });
+    } catch (err) {
+      console.error(err);
+      setStatus('error');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -49,6 +68,11 @@ const ProductInquiryForm = ({ product }: ProductInquiryFormProps) => {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
+          {status === 'error' && (
+            <div className="bg-red-50 text-red-600 p-3 rounded text-sm border border-red-200">
+                Failed to submit inquiry. Please try again.
+            </div>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-1">
                 <label htmlFor="name" className="text-xs uppercase tracking-widest text-forest font-medium">Full Name</label>
@@ -79,7 +103,7 @@ const ProductInquiryForm = ({ product }: ProductInquiryFormProps) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-1">
+              {/* <div className="space-y-1">
                 <label htmlFor="phone" className="text-xs uppercase tracking-widest text-forest font-medium">Phone Number</label>
                 <input
                   type="tel"
@@ -90,8 +114,8 @@ const ProductInquiryForm = ({ product }: ProductInquiryFormProps) => {
                   className="w-full bg-white/50 border border-forest/20 focus:border-gold rounded px-4 py-2 text-charcoal outline-none transition-colors placeholder:text-charcoal/40"
                   placeholder="+91 98765 43210"
                 />
-              </div>
-              <div className="space-y-1">
+              </div> */}
+              <div className="space-y-1 md:col-span-2">
                 <label htmlFor="variety" className="text-xs uppercase tracking-widest text-forest font-medium">Select Variety</label>
                 <select
                   id="variety"

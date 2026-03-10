@@ -3,8 +3,12 @@
 import CategoryGrid from '@/components/gallery/CategoryGrid';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
+import InquiryModal from '@/components/InquiryModal';
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="font-sans text-charcoal bg-white">
       
@@ -22,11 +26,14 @@ export default function Home() {
             <p className="text-lg text-charcoal/80 leading-relaxed max-w-lg mb-10">
                 Lux Agro Taurea bridges the gap between Indian farmers and global markets, exporting premium quality pulses, spices, and grains with unmatched reliability.
             </p>
-            <div className="flex gap-4">
-                <Link href="#contact" className="px-8 py-3 bg-forest text-gold border border-forest font-medium hover:bg-forest/90 transition-colors rounded-sm shadow-md">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <button 
+                    onClick={() => setIsModalOpen(true)}
+                    className="w-full sm:w-auto text-center px-8 py-3 bg-forest text-gold border border-forest font-medium hover:bg-forest/90 transition-colors rounded-sm shadow-md"
+                >
                     Get in Touch
-                </Link>
-                <Link href="#products" className="px-8 py-3 border border-forest/20 text-forest font-medium hover:border-gold hover:text-gold transition-colors rounded-sm">
+                </button>
+                <Link href="#products" className="w-full sm:w-auto text-center px-8 py-3 border border-forest/20 text-forest font-medium hover:border-gold hover:text-gold transition-colors rounded-sm">
                     View Products
                 </Link>
             </div>
@@ -93,6 +100,8 @@ export default function Home() {
              </Link> */}
         </div>
       </section>
+
+      <InquiryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
