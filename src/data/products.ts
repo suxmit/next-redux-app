@@ -75,22 +75,23 @@ export const products: Category[] = [
                 name: 'Cowpeas (Lobia)',
                 slug: 'cowpeas',
                 description: 'Flavorful Cowpeas, available in white and brown varieties.',
-                varieties: [{ name: 'White Cowpeas' }, { name: 'Brown Cowpeas' }]
+                image: '/images/products/cowpeas-hero.png',
+                varieties: [{ name: 'White Cowpeas', image: '/images/products/white-cowpeas.png' }, { name: 'Brown Cowpeas', image: '/images/products/brown-cowpeas.png' }]
             },
-            {
-                id: 'kidney-beans',
-                name: 'Kidney Beans (Rajma)',
-                slug: 'kidney-beans',
-                description: 'Rich and creamy Kidney Beans.',
-                varieties: [{ name: 'Red Kidney Beans' }, { name: 'White Kidney Beans' }]
-            },
-            {
-                id: 'moth-beans',
-                name: 'Moth Beans (Matki)',
-                slug: 'moth-beans',
-                description: 'Drought-resistant Moth Beans, high in protein.',
-                varieties: [{ name: 'Whole Moth Beans' }]
-            }
+            // {
+            //     id: 'kidney-beans',
+            //     name: 'Kidney Beans (Rajma)',
+            //     slug: 'kidney-beans',
+            //     description: 'Rich and creamy Kidney Beans.',
+            //     varieties: [{ name: 'Red Kidney Beans' }, { name: 'White Kidney Beans' }]
+            // },
+            // {
+            //     id: 'moth-beans',
+            //     name: 'Moth Beans (Matki)',
+            //     slug: 'moth-beans',
+            //     description: 'Drought-resistant Moth Beans, high in protein.',
+            //     varieties: [{ name: 'Whole Moth Beans' }]
+            // }
         ]
     },
     {
@@ -103,22 +104,24 @@ export const products: Category[] = [
                 name: 'Rice',
                 slug: 'rice',
                 description: 'Premium Indian rice varieties including Basmati.',
-                image: '/images/products/cereals-hero.png',
-                varieties: [{ name: 'Basmati Rice' }, { name: 'Non-Basmati Rice' }]
+                image: '/images/products/rice-hero.png',
+                varieties: [{ name: 'Basmati Rice', image: '/images/products/basmati-rice.png' }, { name: 'Non-Basmati Rice', image: '/images/products/non-basmati-rice.png' }]
             },
             {
                 id: 'maize',
                 name: 'Maize / Corn',
                 slug: 'maize',
                 description: 'High-quality yellow maize.',
-                varieties: [{ name: 'Yellow Maize' }, { name: 'White Maize' }]
+                image: '/images/products/maize-hero.png',
+                varieties: [{ name: 'Yellow Maize', image: '/images/products/yellow-maize.png' }, { name: 'White Maize', image: '/images/products/white-maize.png' }]
             },
             {
                 id: 'barley',
                 name: 'Barley',
                 slug: 'barley',
                 description: 'Nutritious Barley grains.',
-                varieties: [{ name: 'Whole Barley' }]
+                image: '/images/products/barley-hero.png',
+                varieties: [{ name: 'Whole Barley', image: '/images/products/whole-barley.png' }]
             }
         ]
     },
@@ -133,21 +136,23 @@ export const products: Category[] = [
                 slug: 'pearl-millet',
                 description: 'Gluten-free Pearl Millet.',
                 image: '/images/products/millets-hero.png',
-                varieties: [{ name: 'Whole Bajra' }]
+                varieties: [{ name: 'Whole Bajra', image: '/images/products/whole-bajra.png' }]
             },
             {
                 id: 'sorghum',
                 name: 'Sorghum (Jowar)',
                 slug: 'sorghum',
                 description: 'Fibre-rich Sorghum grains.',
-                varieties: [{ name: 'Whole Jowar' }]
+                image: '/images/products/sorghum-hero.png',
+                varieties: [{ name: 'Whole Jowar', image: '/images/products/whole-jowar.png' }]
             },
             {
                 id: 'finger-millet',
                 name: 'Finger Millet (Ragi)',
                 slug: 'finger-millet',
                 description: 'Calcium-rich Finger Millet.',
-                varieties: [{ name: 'Whole Ragi' }]
+                image: '/images/products/finger-millet-hero.png',
+                varieties: [{ name: 'Whole Ragi', image: '/images/products/whole-ragi.png' }]
             }
         ]
     },
@@ -163,11 +168,19 @@ export const products: Category[] = [
                 description: 'Aromatic Indian spices.',
                 image: '/images/products/spices-hero.png',
                 varieties: [
-                    { name: 'Chilli' }, { name: 'Turmeric' }, { name: 'Black Pepper' },
-                    { name: 'Coriander' }, { name: 'Cumin' }, { name: 'Fennel' },
-                    { name: 'Fenugreek' }, { name: 'Mustard' }, { name: 'Cardamom' },
-                    { name: 'Cloves' }, { name: 'Cinnamon' }, { name: 'Bay Leaf' },
-                    { name: 'Asafoetida' }
+                    { name: 'Chilli', image: '/images/products/chilli.png' },
+                    { name: 'Turmeric', image: '/images/products/turmeric.png' },
+                    { name: 'Black Pepper', image: '/images/products/black-pepper.png' },
+                    { name: 'Coriander', image: '/images/products/coriander.png' },
+                    { name: 'Cumin', image: '/images/products/cumin.png' },
+                    { name: 'Fennel', image: '/images/products/fennel.png' },
+                    { name: 'Fenugreek', image: '/images/products/fenugreek.png' },
+                    { name: 'Mustard', image: '/images/products/mustard.png' },
+                    { name: 'Cardamom', image: '/images/products/cardamom.png' },
+                    { name: 'Cloves', image: '/images/products/cloves.png' },
+                    { name: 'Cinnamon', image: '/images/products/cinnamon.png' },
+                    { name: 'Bay Leaf', image: '/images/products/bay-leaf.png' },
+                    { name: 'Asafoetida', image: '/images/products/asafoetida.png' }
                 ]
             }
         ]
@@ -184,8 +197,12 @@ export const products: Category[] = [
                 description: 'Farm fresh vegetables.',
                 image: '/images/products/vegetables-hero.png',
                 varieties: [
-                    { name: 'Onion' }, { name: 'Garlic' }, { name: 'Ginger' },
-                    { name: 'Green Chilli' }, { name: 'Okra' }, { name: 'Beetroot' },
+                    { name: 'Onion', image: '/images/products/onion.png' },
+                    { name: 'Garlic', image: '/images/products/garlic.png' },
+                    { name: 'Ginger', image: '/images/products/ginger.png' },
+                    { name: 'Green Chilli', image: '/images/products/green-chilli.png' },
+                    { name: 'Okra', image: '/images/products/okra.png' },
+                    { name: 'Beetroot' },
                     { name: 'Bottle Gourd' }, { name: 'Bitter Gourd' }, { name: 'French Beans' },
                     { name: 'Spinach' }, { name: 'Fenugreek Leaves' }, { name: 'Coriander Leaves' }
                 ]

@@ -1,0 +1,31 @@
+[
+  {
+    "id": "d767e9e9-ca00-427b-8dab-bc0568196ad4",
+    "name": "Test User",
+    "email": "test@example.com",
+    "product": "Chickpeas (Chana)",
+    "variety": "Desi Chickpeas",
+    "message": "Test inquiry from the backend setup.",
+    "createdAt": "2026-03-09T17:01:22.500Z"
+  },
+  {
+    "id": "a080f5d7-b75f-4d4e-b9aa-21b2feaa142e",
+    "name": "Dumit",
+    "email": "mishrasumit1199@gmail.com",
+    "phone": "",
+    "variety": "Split Toor Dal",
+    "message": "sjsjs",
+    "product": "Pigeon Peas (Toor)",
+    "createdAt": "2026-03-09T17:03:30.054Z"
+  },
+  {
+    "id": "310d193b-8a4f-46a4-9bef-ce6a9cee83f4",
+    "name": "Sumit Mishra",
+    "email": "mishrasumit1199@gmail.com",
+    "phone": "06355675005",
+    "message": "Gggggh",
+    "product": "General Inquiry",
+    "variety": "General Inquiry",
+    "createdAt": "2026-03-10T16:38:39.426Z"
+  }
+]
