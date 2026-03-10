@@ -56,13 +56,19 @@ export default function Home() {
 
       {/* Intro Section - Tizara Style "Who We Are" */}
       <section className="py-24 bg-ivory px-6">
-        <div className="max-w-4xl mx-auto text-center">
-             <h2 className="text-3xl font-bold text-forest mb-6">About Lux Agro Taurea</h2>
-             <p className="text-xl text-charcoal/80 leading-relaxed font-light">
-                We are a dedicated export house focused on delivering the finest Indian agricultural produce to the world. 
-                With a deep-rooted heritage in farming and modern supply chain management, we ensure that every grain meets 
-                international standards of quality and safety.
-             </p>
+        <div className="max-w-4xl mx-auto">
+             <h2 className="text-3xl font-bold text-forest mb-8 text-center">About LuxAgro Taurea</h2>
+             <div className="flex flex-col gap-6 text-lg text-charcoal/80 leading-relaxed font-light text-justify sm:text-center">
+                 <p>
+                    <strong className="font-semibold text-forest">LUXAGRO TAUREA</strong> evolved from <strong>Shree Subh Agro & Organic</strong>, our foundational brand that supplied premium organic products across India. Years of hands-on cultivation, sourcing, and domestic distribution helped us build deep expertise in farming practices and trusted relationships from farm to market.
+                 </p>
+                 <p>
+                    As our vision expanded globally, we transitioned into LUXAGRO TAUREA. This new identity carries forward our agricultural heritage while bringing India's finest agricultural and allied products to the international stage. We combine traditional farming wisdom with modern processing and export logistics to deliver traceability and reliability worldwide.
+                 </p>
+                 <p className="text-xl font-medium text-forest mt-4 text-center italic">
+                    From Shree Subh Agro to LUXAGRO TAUREA, our purpose remains unchanged: to honor our farming legacy and responsibly bring the work of Indian farmers to global tables.
+                 </p>
+             </div>
         </div>
       </section>
 
@@ -93,7 +99,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 text-center">
              <span className="text-gold text-lg font-medium mb-4 block">Our Vision</span>
              <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
-                "To build sustainable global partnerships by delivering trusted Indian agricultural products with integrity."
+                "To become a globally trusted agricultural export company, recognised for heritage, quality, transparency, and long-term partnerships, while representing Indian agriculture with pride in international markets."
              </h2>
              {/* <Link href="#contact" className="inline-block border-b border-gold pb-1 text-gold hover:text-white hover:border-white transition-colors">
                 Contact Us to Partner →
