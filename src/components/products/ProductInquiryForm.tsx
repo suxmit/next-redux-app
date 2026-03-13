@@ -112,7 +112,7 @@ const ProductInquiryForm = ({ product }: ProductInquiryFormProps) => {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full bg-white/50 border border-forest/20 focus:border-gold rounded px-4 py-2 text-charcoal outline-none transition-colors placeholder:text-charcoal/40"
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 78797 80962"
                 />
               </div> */}
               <div className="space-y-1 md:col-span-2">

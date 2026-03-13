@@ -202,9 +202,9 @@ export const products: Category[] = [
                     { name: 'Ginger', image: '/images/products/ginger.png' },
                     { name: 'Green Chilli', image: '/images/products/green-chilli.png' },
                     { name: 'Okra', image: '/images/products/okra.png' },
-                    { name: 'Beetroot' },
-                    { name: 'Bottle Gourd' }, { name: 'Bitter Gourd' }, { name: 'French Beans' },
-                    { name: 'Spinach' }, { name: 'Fenugreek Leaves' }, { name: 'Coriander Leaves' }
+                    { name: 'Beetroot', image: '/images/products/beetroot.png' },
+                    { name: 'Bottle Gourd', image: '/images/products/bottle-gourd.png' }, { name: 'Bitter Gourd', image: '/images/products/bitter-gourd.png' }, { name: 'French Beans', image: '/images/products/french-beans.png' },
+                    { name: 'Spinach', image: '/images/products/spinach.png' }, { name: 'Fenugreek Leaves', image: '/images/products/fenugreek-leaves.png' }, { name: 'Coriander Leaves', image: '/images/products/coriander-leaves.png' }
                 ]
             },
             {
@@ -212,7 +212,8 @@ export const products: Category[] = [
                 name: 'Dehydrated Products',
                 slug: 'dehydrated',
                 description: 'Long-lasting dehydrated vegetable powders.',
-                varieties: [{ name: 'Onion Powder' }, { name: 'Garlic Powder' }, { name: 'Ginger Powder' }]
+                image: '/images/products/dehydrated-hero.png',
+                varieties: [{ name: 'Onion Powder', image: '/images/products/onion-powder.png' }, { name: 'Garlic Powder', image: '/images/products/garlic-powder.png' }, { name: 'Ginger Powder', image: '/images/products/ginger-powder.png' }]
             }
         ]
     },
@@ -228,9 +229,9 @@ export const products: Category[] = [
                 description: 'Seasonal fresh fruits.',
                 image: '/images/products/fruits-hero.png',
                 varieties: [
-                    { name: 'Mango' }, { name: 'Banana' }, { name: 'Grapes' },
-                    { name: 'Papaya' }, { name: 'Guava' }, { name: 'Citrus Fruits' },
-                    { name: 'Melons' }, { name: 'Custard Apple' }, { name: 'Jack Fruit' }
+                    { name: 'Mango', image: '/images/products/mango.png' }, { name: 'Banana', image: '/images/products/banana.png' }, { name: 'Grapes', image: '/images/products/grapes.png' },
+                    { name: 'Papaya', image: '/images/products/papaya.png' }, { name: 'Guava', image: '/images/products/guava.png' }, { name: 'Citrus Fruits', image: '/images/products/citrus-fruits.png' },
+                    { name: 'Melons', image: '/images/products/melons.png' }, { name: 'Custard Apple', image: '/images/products/custard-apple.png' }, { name: 'Jack Fruit', image: '/images/products/jack-fruit.png' }
                 ]
             }
         ]
@@ -247,8 +248,8 @@ export const products: Category[] = [
                 description: 'Premium stone-ground flours.',
                 image: '/images/products/flour-hero.png',
                 varieties: [
-                    { name: 'Wheat Flour' }, { name: 'Rice Flour' }, { name: 'Maize Flour' },
-                    { name: 'Millet Flours' }, { name: 'Gram Flour (Besan)' }
+                    { name: 'Wheat Flour', image: '/images/products/wheat-flour.png' }, { name: 'Rice Flour', image: '/images/products/rice-flour.png' }, { name: 'Maize Flour', image: '/images/products/maize-flour.png' },
+                    { name: 'Millet Flours', image: '/images/products/millet-flours.png' }, { name: 'Gram Flour (Besan)', image: '/images/products/gram-flour.png' }
                 ]
             }
         ]

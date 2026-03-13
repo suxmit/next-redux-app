@@ -10,12 +10,12 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="font-sans text-charcoal bg-white">
+    <div className="font-sans text-charcoal bg-white w-full overflow-x-hidden">
       
       {/* Tizara-Style Hero Section (Split Layout) */}
-      <section className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 pt-20">
+      <section className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 pt-[104px]">
         {/* Left Content */}
-        <div className="flex flex-col justify-center px-6 md:px-12 lg:px-20 py-20 bg-white order-2 lg:order-1">
+        <div className="flex flex-col justify-center px-6 md:px-12 lg:px-20 py-12 lg:py-20 bg-white order-2 lg:order-1">
             <span className="text-gold font-medium tracking-widest uppercase text-xs mb-4">
                 Global Agricultural Exports
             </span>
@@ -43,10 +43,10 @@ export default function Home() {
         <div className="relative h-[50vh] lg:h-auto bg-ivory order-1 lg:order-2 min-h-[400px]">
             <div className="absolute inset-0">
                 <Image 
-                    src="/hero.png"
+                    src="/hero-premium.png"
                     alt="Premium Indian Agricultural Exports - Pulses, Grains, and Spices"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
                     sizes="(max-width: 1024px) 100vw, 50vw"
                 />
@@ -94,16 +94,25 @@ export default function Home() {
           </div>
       </section> */}
 
-      {/* Vision Section */}
-      <section id="our-story" className="py-24 bg-forest text-ivory">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-             <span className="text-gold text-lg font-medium mb-4 block">Our Vision</span>
-             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
-                "To become a globally trusted agricultural export company, recognised for heritage, quality, transparency, and long-term partnerships, while representing Indian agriculture with pride in international markets."
-             </h2>
-             {/* <Link href="#contact" className="inline-block border-b border-gold pb-1 text-gold hover:text-white hover:border-white transition-colors">
-                Contact Us to Partner →
-             </Link> */}
+      {/* Vision & Mission Section */}
+      <section id="our-story" className="py-24 bg-forest text-ivory overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0">
+                <div className="flex flex-col md:pr-12 md:border-r border-ivory/20 pb-12 border-b md:pb-0 md:border-b-0 md:border-t-0">
+                    <span className="text-gold text-lg font-medium mb-4 block text-center md:text-left">Our Mission</span>
+                    <h2 className="text-xl md:text-2xl font-light leading-relaxed text-center md:text-left italic">
+                        "To supply high-quality agricultural and allied products to domestic and international markets through responsible sourcing, strict quality control, and reliable export practices, while supporting farmers and promoting sustainable agriculture."
+                    </h2>
+                </div>
+
+                {/* Vision */}
+                <div className="flex flex-col md:pl-12 pt-12 md:pt-0">
+                    <span className="text-gold text-lg font-medium mb-4 block text-center md:text-left">Our Vision</span>
+                    <h2 className="text-xl md:text-2xl font-light leading-relaxed text-center md:text-left italic">
+                        "To become a globally trusted agricultural export company, recognised for heritage, quality, transparency, and long-term partnerships, while representing Indian agriculture with pride in international markets."
+                    </h2>
+                </div>
+             </div>
         </div>
       </section>
 

@@ -9,7 +9,7 @@ const CategoryGrid = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
             <div>
              {/* <h2 className="text-gold font-bold tracking-widest uppercase text-xs mb-2">Our Offerings</h2> */}
-                <h3 className="text-3xl md:text-5xl font-bold text-forest tracking-tight">Product Categories</h3>
+                <h3 className="text-3xl md:text-5xl font-bold text-forest tracking-tight">Products</h3>
             </div>
             {/* <Link href="/products/pulses-legumes" className="hidden md:block text-charcoal/60 hover:text-forest transition-colors text-sm font-medium border-b border-charcoal/20 hover:border-forest pb-1">
                 View All Categories

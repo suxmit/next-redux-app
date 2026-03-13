@@ -47,7 +47,6 @@ const Footer = () => {
             <ul className="space-y-4">
               {[
                 { name: 'About Us', href: '/about' },
-                { name: 'Our Mission', href: '/#our-story' },
                 { name: 'Privacy Policy', href: '/privacy-policy' },
                 // { name: 'Contact', href: '#contact' }
               ].map((item) => (
@@ -66,23 +65,32 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex flex-col gap-1">
                 <span className="text-forest/60 text-xs font-bold uppercase tracking-wider bg-gold/10 inline-block px-2 py-1 rounded w-fit text-ivory/80">
-                    Corporate Office
+                    India Office 🇮🇳
                 </span>
-                <p className="text-ivory/70 text-sm leading-relaxed">
-                  123, Business Park, <br />
-                  Mumbai, Maharashtra, India
+                <p className="text-ivory/70 text-sm leading-relaxed mb-1">
+                  Old AB Road Khalghat, District - Dhar,<br />
+                  454552, Madhya Pradesh, India
                 </p>
+                <a href="tel:+917879780962" className="text-ivory/90 hover:text-gold text-sm transition-colors font-medium">
+                   +91 78797 80962
+                </a>
               </li>
-              <li className="flex flex-col gap-1">
+              <li className="flex flex-col gap-1 mt-4">
+                <span className="text-forest/60 text-xs font-bold uppercase tracking-wider bg-gold/10 inline-block px-2 py-1 rounded w-fit text-ivory/80">
+                    UK Office 🇬🇧
+                </span>
+                <p className="text-ivory/70 text-sm leading-relaxed mb-1">
+                  115, Forum House, Empire Way,<br />
+                  Wembley Park, HA9 0HJ
+                </p>
+                <a href="tel:+447407051321" className="text-ivory/90 hover:text-gold text-sm transition-colors font-medium">
+                   +44 7407 051321
+                </a>
+              </li>
+              <li className="flex flex-col gap-1 mt-4">
                  <span className="text-ivory/50 text-xs uppercase tracking-wider">Email</span>
-                 <a href="mailto:export@luxagrotaurea.com" className="text-ivory/90 hover:text-gold text-sm transition-colors font-medium">
-                    export@luxagrotaurea.com
-                 </a>
-              </li>
-              <li className="flex flex-col gap-1">
-                 <span className="text-ivory/50 text-xs uppercase tracking-wider">Phone</span>
-                 <a href="tel:+919876543210" className="text-ivory/90 hover:text-gold text-sm transition-colors font-medium">
-                    +91 98765 43210
+                 <a href="mailto:info@luxagrotaurea.com" className="text-ivory/90 hover:text-gold text-sm transition-colors font-medium">
+                    info@luxagrotaurea.com
                  </a>
               </li>
             </ul>
