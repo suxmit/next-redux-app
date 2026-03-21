@@ -93,45 +93,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder's Section */}
-      <section className="relative py-24 bg-charcoal text-white overflow-hidden">
-        {/* Background Overlay */}
-        <div className="absolute inset-0 opacity-20">
-             <Image 
-                src="/founder-bg.png"
-                alt="Agricultural texture"
-                fill
-                className="object-cover"
-             />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/90 to-transparent"></div>
-
-        <div className="relative z-10 max-w-5xl mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                {/* Content */}
-                <div className="lg:col-span-12">
-                     <span className="text-gold text-sm font-bold tracking-widest uppercase mb-4 block">A Message From The Founder</span>
-                     <h2 className="text-3xl md:text-4xl font-serif mb-8 text-ivory">Bridging Roots to the World</h2>
-                     
-                     <div className="flex flex-col gap-6 text-lg font-light leading-relaxed text-white/80 text-justify sm:text-left mb-12">
-                         <p>
-                            Growing up in a family closely connected to farming, I witnessed from an early age the dedication, resilience, and pride that Indian farmers bring to the land. Those experiences shaped my respect for agriculture and inspired a vision that stayed with me since my high school years—to one day take the richness of Indian agricultural produce beyond our borders and share it with the world. To pursue this goal, I studied Business Administration with a specialization in International Business Management, and later moved to the United Kingdom to complete my MSc in International Business, gaining global exposure and a deeper understanding of international trade.
-                         </p>
-                         <p>
-                            With this foundation, I established <strong>LUXAGRO TAUREA LLP</strong> with a clear purpose: to connect the hard work of Indian farmers with global markets while maintaining the highest standards of quality, transparency, and trust. For me, agriculture is not just a business—it is a legacy, a responsibility, and a bridge between cultures. Our commitment remains simple yet powerful: to bring the best quality from Indian farmers to global tables while building lasting relationships across international markets.
-                         </p>
-                     </div>
-
-                     <div className="border-t border-white/20 pt-6">
-                         <h4 className="text-xl tracking-wide font-medium text-gold">— Pratham Singh Chouhan</h4>
-                         <p className="text-white/60">Founder, LUXAGRO TAUREA LLP</p>
-                     </div>
-                </div>
-            </div>
-        </div>
-      </section>
-
     </div>
   );
 }
