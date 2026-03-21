@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import InquiryModal from '@/components/InquiryModal';
+import FoundersSection from '@/components/about/FoundersSection';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +25,7 @@ export default function Home() {
                 Delivering Excellence.
             </h1>
             <p className="text-lg text-charcoal/80 leading-relaxed max-w-lg mb-10">
-                Lux Agro Taurea bridges the gap between Indian farmers and global markets, exporting premium quality pulses, spices, and grains with unmatched reliability.
+                LuxAgro Taurea bridges the gap between Indian farmers and global markets, exporting premium quality pulses, spices, and grains with unmatched reliability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <button 
@@ -115,6 +116,9 @@ export default function Home() {
              </div>
         </div>
       </section>
+
+      {/* Founders / Leadership Section */}
+      <FoundersSection />
 
       <InquiryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>

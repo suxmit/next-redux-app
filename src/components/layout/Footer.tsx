@@ -102,11 +102,11 @@ const Footer = () => {
             © {new Date().getFullYear()} LUX AGRO TAUREA.
           </p>
           <div className="flex space-x-8">
-            {['Instagram', 'Pinterest', 'LinkedIn'].map((item) => (
+            {/* {['Instagram', 'Pinterest', 'LinkedIn'].map((item) => (
               <a key={item} href="#" className="text-ivory/60 hover:text-gold text-xs tracking-wider uppercase transition-colors">
                 {item}
               </a>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
