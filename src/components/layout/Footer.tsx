@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-forest border-t border-gold/20 pt-20 pb-10">
+    <footer id="contact" className="bg-forest border-t border-gold/20 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
@@ -17,7 +17,7 @@ const Footer = () => {
                 />
             </Link>
             <p className="text-ivory/70 text-sm leading-relaxed max-w-xs">
-              Bridging the gap between Indian farmers and global markets with premium quality agricultural exports.
+              Harvesting Heritage. Delivering Excellence Worldwide.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ const Footer = () => {
                     UK Office 🇬🇧
                 </span>
                 <p className="text-ivory/70 text-sm leading-relaxed mb-1">
-                  115, Forum House, Empire Way,<br />
+                  Forum House, Empire Way,<br />
                   Wembley Park, HA9 0HJ
                 </p>
                 <a href="tel:+447407051321" className="text-ivory/90 hover:text-gold text-sm transition-colors font-medium">
@@ -99,7 +99,7 @@ const Footer = () => {
 
         <div className="border-t border-gold/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-ivory/50 text-xs tracking-wider">
-            © {new Date().getFullYear()} LUX AGRO TAUREA.
+            © {new Date().getFullYear()} LUXAGRO TAUREA.
           </p>
           <div className="flex space-x-8">
             {/* {['Instagram', 'Pinterest', 'LinkedIn'].map((item) => (
