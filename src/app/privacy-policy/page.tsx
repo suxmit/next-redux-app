@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
         <div className="mb-12 border-b border-forest/10 pb-8">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-forest mb-6">Privacy Policy</h1>
             <p className="text-lg text-charcoal/80 leading-relaxed max-w-3xl">
-              At <strong>LUXAGRO TAUREA LLP</strong>, we value your privacy and are committed to protecting the personal information of our website visitors, customers, and business partners. This Privacy Policy explains how we collect, use, store, and protect your information when you visit our website or communicate with us.
+              At <strong className="text-forest font-semibold">LUXAGRO TAUREA LLP</strong>, we value your privacy and are committed to protecting the personal information of our website visitors, customers, and business partners. This Privacy Policy explains how we collect, use, store, and protect your information when you visit our website or communicate with us.
             </p>
             <p className="text-lg text-charcoal/80 mt-4 italic text-forest/80">
                 By using our website, you agree to the terms described in this Privacy Policy.
@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
             <section>
                 <h2 className="text-2xl font-serif font-semibold text-forest mb-4">1. Company Information</h2>
                 <div className="space-y-2">
-                    <p className="font-semibold text-charcoal">LUXAGRO TAUREA LLP</p>
+                    <p className="font-semibold text-forest">LUXAGRO TAUREA LLP</p>
                     <p><strong>Business Activity:</strong> Export and trade of agricultural products.</p>
                     <p>
                         <strong>Registered Office:</strong><br />
@@ -154,7 +154,7 @@ export default function PrivacyPolicyPage() {
             <section>
                 <h2 className="text-2xl font-serif font-semibold text-forest mb-4">11. Changes to This Policy</h2>
                 <p>
-                    LUXAGRO TAUREA LLP may update this Privacy Policy from time to time to reflect changes in legal requirements or business practices. Any updates will be posted on this page with the revised date.
+                    <strong className="text-forest font-semibold">LUXAGRO TAUREA LLP</strong> may update this Privacy Policy from time to time to reflect changes in legal requirements or business practices. Any updates will be posted on this page with the revised date.
                 </p>
             </section>
         </div>

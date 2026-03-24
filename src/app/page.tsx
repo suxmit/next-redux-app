@@ -24,8 +24,8 @@ export default function Home() {
                 Harvesting Heritage.<br />
                 Delivering Excellence.
             </h1>
-            <p className="text-lg text-charcoal/80 leading-relaxed max-w-lg mb-10">
-                LuxAgro Taurea bridges the gap between Indian farmers and global markets, exporting premium quality pulses, spices, and grains with unmatched reliability.
+            <p className="text-lg text-charcoal/80 leading-relaxed max-w-xl mb-10 text-left md:text-justify">
+                LuxAgro Taurea bridges the gap between Indian farmers and global markets with premium quality agricultural exports.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <button 
@@ -59,16 +59,16 @@ export default function Home() {
       <section className="py-24 bg-ivory px-6">
         <div className="max-w-4xl mx-auto">
              <h2 className="text-3xl font-bold text-forest mb-8 text-center">About LuxAgro Taurea</h2>
-             <div className="flex flex-col gap-6 text-lg text-charcoal/80 leading-relaxed font-light text-justify sm:text-center">
+             <div className="flex flex-col gap-6 text-lg text-charcoal/80 leading-relaxed font-light text-center md:text-justify">
                  <p>
-                    <strong className="font-semibold text-forest">LUXAGRO TAUREA</strong> evolved from <strong>Shree Subh Agro & Organic</strong>, our foundational brand that supplied premium organic products across India. Years of hands-on cultivation, sourcing, and domestic distribution helped us build deep expertise in farming practices and trusted relationships from farm to market.
+                    <strong className="font-semibold text-forest">LUXAGRO TAUREA</strong> evolved from <strong className="text-forest font-semibold">Shree Shubh Agro & Organic</strong>, our foundational brand that supplied premium organic products across India. Years of hands-on cultivation, sourcing, and domestic distribution helped us build deep expertise in farming practices and trusted relationships from farm to market.
                  </p>
                  <p>
-                    As our vision expanded globally, we transitioned into LUXAGRO TAUREA. This new identity carries forward our agricultural heritage while bringing India's finest agricultural and allied products to the international stage. We combine traditional farming wisdom with modern processing and export logistics to deliver traceability and reliability worldwide.
+                    As our vision expanded globally, we transitioned into <strong className="text-forest font-semibold">LUXAGRO TAUREA</strong>. This new identity carries forward our agricultural heritage while bringing India's finest agricultural and allied products to the international stage. We combine traditional farming wisdom with modern processing and export logistics to deliver traceability and reliability worldwide.
                  </p>
-                 <p className="text-xl font-medium text-forest mt-4 text-center italic">
-                    From Shree Subh Agro to LUXAGRO TAUREA, our purpose remains unchanged: to honor our farming legacy and responsibly bring the work of Indian farmers to global tables.
-                 </p>
+<p className="text-2xl font-serif text-forest mt-8 text-center md:text-justify italic leading-relaxed px-4 border-l-4 border-gold bg-ivory/30 py-6 rounded-r-md">
+                "From <strong className="text-forest font-semibold">Shree Shubh Agro & Organic</strong> to <strong className="text-forest font-semibold">LUXAGRO TAUREA</strong>, our purpose remains unchanged: to respect our farming legacy and responsibly bring the work of Indian farmers to global tables."
+            </p>
              </div>
         </div>
       </section>
@@ -100,16 +100,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0">
                 <div className="flex flex-col md:pr-12 md:border-r border-ivory/20 pb-12 border-b md:pb-0 md:border-b-0 md:border-t-0">
-                    <span className="text-gold text-lg font-medium mb-4 block text-center md:text-left">Our Mission</span>
-                    <h2 className="text-xl md:text-2xl font-light leading-relaxed text-center md:text-left italic">
+                    <span className="text-gold text-lg font-medium mb-4 block text-center">Our Mission</span>
+                    <h2 className="text-lg md:text-xl font-light leading-relaxed text-center md:text-justify">
                         "To supply high-quality agricultural and allied products to domestic and international markets through responsible sourcing, strict quality control, and reliable export practices, while supporting farmers and promoting sustainable agriculture."
                     </h2>
                 </div>
 
                 {/* Vision */}
                 <div className="flex flex-col md:pl-12 pt-12 md:pt-0">
-                    <span className="text-gold text-lg font-medium mb-4 block text-center md:text-left">Our Vision</span>
-                    <h2 className="text-xl md:text-2xl font-light leading-relaxed text-center md:text-left italic">
+                    <span className="text-gold text-lg font-medium mb-4 block text-center">Our Vision</span>
+                    <h2 className="text-lg md:text-xl font-light leading-relaxed text-center md:text-justify">
                         "To become a globally trusted agricultural export company, recognised for heritage, quality, transparency, and long-term partnerships, while representing Indian agriculture with pride in international markets."
                     </h2>
                 </div>
