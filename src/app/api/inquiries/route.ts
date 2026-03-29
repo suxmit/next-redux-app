@@ -1,35 +1,40 @@
 import { NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-import path from 'path';
+import { Pool } from 'pg';
 
-// Define the shape of our inquiry
-interface Inquiry {
-    id: string;
-    name: string;
-    email: string;
-    phone?: string;
-    product: string;
-    variety: string;
-    message: string;
-    createdAt: string;
-}
+// Strip any query parameters (like ?sslmode=require) from the connection string
+// because it overrides the ssl: { rejectUnauthorized: false } setting in local development.
+const connectionString = process.env.POSTGRES_URL_NON_POOLING?.split('?')[0];
 
-// Get the path to our local JSON database
-const dataFilePath = path.join(process.cwd(), 'src', 'data', 'inquiries.json');
+const pool = new Pool({
+    connectionString,
+    ssl: { rejectUnauthorized: false }
+});
 
 export async function GET() {
     try {
-        const fileContents = await fs.readFile(dataFilePath, 'utf8');
-        const inquiries: Inquiry[] = JSON.parse(fileContents);
+        // Create table if it doesn't exist
+        await pool.query(`
+            CREATE TABLE IF NOT EXISTS inquiries (
+                id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                name VARCHAR(255) NOT NULL,
+                email VARCHAR(255) NOT NULL,
+                phone VARCHAR(50),
+                product VARCHAR(255) NOT NULL,
+                variety VARCHAR(255) NOT NULL,
+                message TEXT NOT NULL,
+                "createdAt" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+            );
+        `);
 
-        // Sort inquiries by newest first
-        inquiries.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+        // Fetch all inquiries
+        const { rows } = await pool.query(`
+            SELECT * FROM inquiries ORDER BY "createdAt" DESC;
+        `);
 
-        return NextResponse.json(inquiries);
+        return NextResponse.json(rows);
     } catch (error) {
-        console.error('Error reading inquiries:', error);
-        // If file doesn't exist or is invalid, return empty array
-        return NextResponse.json([]);
+        console.error('Error reading inquiries from Postgres:', error);
+        return NextResponse.json({ error: 'Failed to fetch inquiries' }, { status: 500 });
     }
 }
 
@@ -45,30 +50,16 @@ export async function POST(request: Request) {
             );
         }
 
-        const newInquiry: Inquiry = {
-            id: crypto.randomUUID(),
-            ...data,
-            createdAt: new Date().toISOString()
-        };
+        // Insert new inquiry
+        const { rows } = await pool.query(`
+            INSERT INTO inquiries (name, email, phone, product, variety, message)
+            VALUES ($1, $2, $3, $4, $5, $6)
+            RETURNING id;
+        `, [data.name, data.email, data.phone || null, data.product, data.variety, data.message || ' ']);
 
-        // Read existing inquiries
-        let inquiries: Inquiry[] = [];
-        try {
-            const fileContents = await fs.readFile(dataFilePath, 'utf8');
-            inquiries = JSON.parse(fileContents);
-        } catch {
-            // If file doesn't read cleanly, we'll start with an empty array
-        }
-
-        // Add new inquiry
-        inquiries.push(newInquiry);
-
-        // Save back to file
-        await fs.writeFile(dataFilePath, JSON.stringify(inquiries, null, 2), 'utf8');
-
-        return NextResponse.json({ success: true, id: newInquiry.id }, { status: 201 });
+        return NextResponse.json({ success: true, id: rows[0].id }, { status: 201 });
     } catch (error) {
-        console.error('Failed to create inquiry:', error);
+        console.error('Failed to create inquiry in Postgres:', error);
         return NextResponse.json(
             { error: 'Failed to process inquiry' },
             { status: 500 }
